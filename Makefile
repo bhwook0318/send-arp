@@ -1,6 +1,6 @@
 LDLIBS=-lpcap
 
-all: send-arp-test
+all: send-arp
 
 
 main.o: mac.h ip.h ethhdr.h arphdr.h main.cpp
@@ -19,4 +19,4 @@ send-arp-test: main.o arphdr.o ethhdr.o ip.o mac.o get_addr.o
 	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 clean:
-	rm -f send-arp-test *.o
+	rm -f send-arp *.o
