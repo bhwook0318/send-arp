@@ -15,7 +15,7 @@ mac.o : mac.h mac.cpp
 
 get_addr.o : get_addr.h get_addr.cpp
 
-send-arp-test: main.o arphdr.o ethhdr.o ip.o mac.o get_addr.o
+send-arp: main.o arphdr.o ethhdr.o ip.o mac.o get_addr.o
 	$(LINK.cc) $^ $(LOADLIBES) $(LDLIBS) -o $@
 
 clean:
